@@ -1,0 +1,164 @@
+\documentclass[11pt]{article}
+%\usepackage{fullpage}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage[usenames]{color}
+%\usepackage{multicol}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.25in
+\textheight=9.4in
+\footskip=-10pt
+
+\raggedright
+\thispagestyle{empty}
+
+\pagenumbering{gobble}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+\newenvironment{blockquote}{%
+	\par%
+	\medskip
+	\leftskip=1em\rightskip=1em%
+	\noindent\ignorespaces}{%
+	\par\medskip}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\vspace*{-1.1in}
+\contact{Taylor K McKenzie}{ \textbf{Location:} Sandia National Laboratory (NM) 823/1050}{\textbf{E-mail:} tmcken@sandia.gov / \textbf{Phone:} (505) 284--9201}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\header{Skills}
+
+\begin{body}
+	\vspace{14pt}
+	\begin{itemize}
+		\item Development and implementation of simulation models from theory and discussions with subject matter experts.
+		\item Mathematical analysis of models investigating dynamics, relations, and other key properties.
+		\item Combining simulation and mathematical models with data for statistical estimation, inference, and prediction using classical, Bayesian (MCMC), and machine learning methods.
+		\item Strength in R, Python, Matlab, and Stata.
+		\item Significant experience working with diverse teams and developing models that synthesize theories and results from a multitude of disciplines.
+		\item Communicating methods, results, and findings to both specialized and broad audiences.
+	\end{itemize}
+\end{body}
+
+\smallskip
+
+% Education
+%\vspace{-12pt}
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Ph.D., M.S. Economics}{} \hfill \emph{June 2017}{} \\
+	\begin{itemize}
+		\vspace*{-1ex}
+		\item[--] Emphasis in Statistics, Simulation, and Quantitative Systems Analysis
+		\vspace*{-1ex}
+	\end{itemize}
+	\emph{University of Oregon}, Eugene, OR{}\\
+	\emph{Advisor: Dr. Wesley W. Wilson} \\
+	\vspace*{0pt}
+  \medskip
+  	\textbf{B.A. Mathematics and Economics}{} \hfill \emph{May 2012}{} \\
+	\emph{Willamette University}, Salem, OR{}\hfill \emph{Summa Cum Laude}{}\\
+	\emph{Advisors: Dr. Peter Otto and Dr. Raechelle Mascarenhas} {} \hfill\\
+\end{body}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+% Experience
+
+
+\header{Work Experience}
+
+\begin{body}
+	\vspace{14pt}
+
+	\textbf{Pacific Northwest National Laboratory} \hfill \emph{Dates: Summers 2010 - 2014}\\ 
+	\emph{National Security Intern, Knowledge Discovery and Informatics Group}\hfill \emph{902 Battelle Blvd}\\ \emph{Mentors: Dr. Courtney Corley and Dr. Satish Chikkagoudar} \hfill \emph{Richland, WA 99354}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+\item Developed a game-theoretic model of inter-organization email traffic and estimated the\\ model and produced simulations using Bayesian methods. Simulations were used to\\ identify resiliency against cybersecurity threats and develop strategies to mitigate the\\ damage of cyberattacks.
+\item Developed methods to predict and interpret trends in social media and implemented those\\ methods in Python and R on PNNL's supercomputing cluster. Also co-authored ``SociAL\\ Sensor Analytics: Measuring Phenomenology at Scale.''
+\item Developed a predictive disease model describing spread of SARS and cholera worldwide and prototyped both models in Python. Also developed estimates for air travel between countries and the effects of various intervention techniques such as airport screening and quarantine.
+\item Developed metrics to analyze the effectiveness of biosurveillance systems and models and\\ investigated economic indicators in nuclear proliferation pathway analysis. Also co-authored ``Assessing the Continuum of Event-Based Biosurveillance Through an Operational Lens.''
+	\end{itemize}
+	
+	\textbf{University of Oregon} \hfill \emph{Dates: 2012 - 2015}\\
+	\emph{Graduate Teaching Fellow} \hfill \emph{1585 E 13th Ave.}\\
+	\emph{Department of Economics} \hfill \emph{Eugene, OR 97403}\\
+	\begin{itemize}
+		\item Developed lesson plans and instructed both undergraduate and graduate students in topics in Economics.
+		\item Independent instructor for Intermediate Microeconomics (2014W), Development Economics (2015F, 2016Sp), and Industrial Organization (2016F, 2017Sp).
+		\item Offered instruction that was approachable and intuitive to general audiences not necessarily familiar with Economics while still providing rigor necessary to precisely analyze models and theories.
+	\end{itemize}
+				
+\end{body}
+\vspace{-9pt}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
