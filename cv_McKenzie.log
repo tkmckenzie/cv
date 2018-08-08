@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.18)  28 AUG 2017 07:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.18)  8 AUG 2018 11:14
 entering extended mode
 **./cv_McKenzie.tex
 (cv_McKenzie.tex
@@ -35,35 +35,37 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 97.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 128.
+
 
 ("C:\Users\tmcken\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 97.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
 
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] (cv_McKenzie.aux) ) 
+{C:/Users/tmcken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+[3] (cv_McKenzie.aux) ) 
 Here is how much of TeX's memory you used:
- 241 strings out of 493323
- 2797 string characters out of 3129581
- 61648 words of memory out of 3000000
- 3859 multiletter control sequences out of 15000+200000
+ 242 strings out of 493323
+ 2805 string characters out of 3129581
+ 62648 words of memory out of 3000000
+ 3860 multiletter control sequences out of 15000+200000
  5751 words of font info for 21 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 21i,4n,19p,329b,223s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Us
-ers/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x10.pfb><C:/Users/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmcsc10.pfb><C:/Users/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tmcken/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/tmcken/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on cv_McKenzie.pdf (1 page, 84359 bytes).
+ 21i,4n,19p,1685b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tmcken/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tmcken/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tmck
+en/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+<C:/Users/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmti10.pfb>
+Output written on cv_McKenzie.pdf (3 pages, 92525 bytes).
 PDF statistics:
- 26 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

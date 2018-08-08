@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.18)  28 AUG 2017 07:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6350 64-bit) (preloaded format=pdflatex 2017.8.18)  8 AUG 2018 11:14
 entering extended mode
-**./cv_old.tex
-(cv_old.tex
+**./cv_McKenzie_CO_primer.tex
+(cv_McKenzie_CO_primer.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Users\tmcken\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -20,8 +20,8 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) (cv_old.aux)
-\openout1 = `cv_old.aux'.
+) (cv_McKenzie_CO_primer.aux)
+\openout1 = `cv_McKenzie_CO_primer.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
@@ -35,43 +35,37 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 128.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 131.
 
 
 ("C:\Users\tmcken\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 128.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
 
 [1
 
-{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 281.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 281.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 281.
- [3] [4] (cv_old.aux) ) 
+{C:/Users/tmcken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+[3] (cv_McKenzie_CO_primer.aux) ) 
 Here is how much of TeX's memory you used:
- 257 strings out of 493323
- 2921 string characters out of 3129581
+ 242 strings out of 493323
+ 2905 string characters out of 3129581
  62648 words of memory out of 3000000
- 3869 multiletter control sequences out of 15000+200000
- 7933 words of font info for 28 fonts, out of 3000000 for 9000
+ 3860 multiletter control sequences out of 15000+200000
+ 5751 words of font info for 21 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 21i,6n,19p,1679b,259s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tmcken/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tmcken/AppData/Lo
-cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/tmck
-en/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-<C:/Users/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmti10.pfb>
-Output written on cv_old.pdf (4 pages, 99217 bytes).
+ 21i,4n,19p,1695b,254s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/tmcken/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/tmcken/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/tmcken/
+AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Users/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
+msy10.pfb><C:/Users/tmcken/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/amsfonts/cm/cmti10.pfb>
+Output written on cv_McKenzie_CO_primer.pdf (3 pages, 92030 bytes).
 PDF statistics:
- 35 PDF objects out of 1000 (max. 8388607)
+ 32 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
