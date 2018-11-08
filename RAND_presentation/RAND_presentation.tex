@@ -1,0 +1,195 @@
+\documentclass{beamer}
+
+\newcommand{\ep}{\varepsilon}
+\newcommand{\img}[1]{\includegraphics[width=4in]{#1}}
+
+\begin{document}
+	
+\begin{frame}{Motivating Example}
+\begin{itemize}
+	\item Suppose we are trying to fit a production frontier, but have little information about its functional form: $$Y_i = F(X_i)\Delta_i \tilde\ep_i$$
+		\begin{itemize}
+			\item $Y_i$ is $i$th observation of output
+			\item $X_i$ is $i$th observation of inputs
+			\item $F$ is (unknown) production function
+			\item $\Delta_i\in[0, 1]$ is technical efficiency
+			\item $\tilde\ep_i > 0$ is observation error
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivating Example: Data}
+\begin{figure}
+	\centering
+	\img{figures/data.pdf}
+	\caption{Simulated Data}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Motivating Example: Cleaning Data}
+\begin{itemize}
+	\item Common first step: Log-transform: $$y_i = f(X_i) + \delta_i + \ep_i$$
+		\begin{itemize}
+			\item $y_i = \log Y_i$
+			\item $f(X_i) = \log F(X_i)$
+			\item $\delta_i = \log \Delta_i \leq 0$
+			\item $\ep_i = \log \tilde\ep_i$
+		\end{itemize}
+	\item Make distributional assumptions:
+		\begin{itemize}
+			\item $\delta_i\sim N^-(0, \sigma_\delta)$
+			\item $\ep_i\sim N(0, \sigma_\ep)$
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivating Example: Data}
+\begin{figure}
+	\centering
+	\img{figures/data-log.pdf}
+	\caption{Log Simulated Data}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Motivating Example: Functional Forms}
+\begin{itemize}
+	\item We still need to select a form for $f$
+	\item Traditionally, parametric forms of $f$ have been used
+		\begin{itemize}
+			\item Log-linear: $f(X_i) = \log(X_i)\beta$
+			\item Translog: All log-inputs, squared log-inputs, and interactions between log-inputs
+		\end{itemize}
+	\item Could also use a non-parametric specification
+		\begin{itemize}
+			\item Du et al. (2013) use kernel smoothing to fit conditional mean of the data, use residuals to fit distributional parameters
+		\end{itemize}
+	\item How can we select between these functional forms, especially given limited data?
+		\begin{itemize}
+			\item Log-linear and translog forms can be compared using many methods
+			\item Difficult to compare with non-parametric methods
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivating Example: Functional Forms}
+\begin{figure}
+	\centering
+	\img{figures/func-forms.pdf}
+	\caption{Fitted Frontiers}
+\end{figure}
+\end{frame}
+
+\begin{frame}{Model Selection}
+\begin{itemize}
+	\item Classical methods
+		\begin{itemize}
+			\item Based on likelihood values
+			\item Some methods are restrictive in what models can be compared (e.g., nested models), others like information criteria are general
+			\item Require moderate to large sample sizes
+			\item \textbf{Problems:}
+				\begin{itemize}
+					\item Kernel smoothing is not likelihood-based
+					\item Sample sizes may not be large enough
+					\item Classical methods are unreliable for estimating stochastic frontiers
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Model Selection}
+\begin{itemize}
+	\item Cross-validation
+	\begin{itemize}
+		\item Fit the model with one sub-sample, test accuracy against another sub-sample
+		\item Requires large sample sizes and a metric for accuracy
+		\item \textbf{Problem:} Sample sizes are not large enough
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Model Selection}
+\begin{itemize}
+	\item Bayesian methods
+		\begin{itemize}
+			\item Very general model comparison, can estimate the probability a model is correct from a set of exclusive models
+				\begin{itemize}
+					\item Accounts for likelihood and numbers of parameters
+				\end{itemize}
+			\item No sample size restrictions in general
+			\item \textbf{Difficulties:}
+				\begin{itemize}
+					\item Need a Bayesian analogue of kernel smoothing (Gaussian processes)
+					\item Calculating model probabilities is hard in general, existing methods are unsuitable for large models applied to small samples
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Bayesian Model Selection}
+\begin{itemize}
+	\item Given a set of exclusive models $\{M_1, ..., M_K\}$, the probability that model $M_k$ is the true model given data $y$ is $$\Pr(M_k|y) = \frac{m(y|M_k)p(M_k)}{\sum_{j=1}^K m(y|M_j)p(M_j)}$$
+		\begin{itemize}
+			\item $m(y|M_k)$ is marginal likelihood of model $M_k$
+			\item $p(M_k)$ is prior probability that $M_k$ is the true model
+		\end{itemize}
+	\item Marginal likelihoods are difficult to compute in general
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Marginal Likelihood Estimation}
+\begin{itemize}
+	\item Many methods have been developed to compute marginal likelihoods
+		\begin{itemize}
+			\item If Gibbs or Metropolis-Hastings sampling are used, efficient methods developed in Chib (1995) and Chib and Jeliazkov (2001)
+			\item Laplace's method and Gaussian quadrature perform well for moderately-sized models
+			\item Bridge sampling is very efficient and is widely applicable (in theory)
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Marginal Likelihood Estimation: Problems}
+\begin{itemize}
+	\item Existing methods are not well suited to marginal likelihood estimation for this model and data
+	\begin{itemize}
+		\item Model is not of correct form for Gibbs sampling
+		\item Excessive convergence times for Metropolis-Hastings sampling
+		\item Models have too many parameters relative to sample size for Laplace's method, accuracy is degraded
+		\item Models have too many parameters for Gaussian quadrature to be computationally feasible
+		\item Bridge sampling is prone to numerical issues in large models, accuracy is degraded (more on this later)
+	\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Numerical Issues With Bridge Sampling}
+\begin{itemize}
+	\item Bridge sampling estimates marginal likelihood with $$\hat{m}(y) = \frac{\frac{1}{N_2}\sum_{s=1}^{N_2} p\left(y|\theta_{g}^{[s]}\right)p\left(\theta_{g}^{[s]}\right)h\left(\theta_{g}^{[s]}\right)}{\frac{1}{N_1}\sum_{s=1}^{N_1} h\left(\theta_{y}^{[s]}\right)g\left(\theta_{y}^{[s]}\right)}$$
+		\begin{itemize}
+			\item $\theta$ denote parameters
+			\item $p(y|\theta)$ is the likelihood
+			\item $p(\theta)$ are priors over parameters
+			\item $g(\theta)$ is the proposal distribution, chosen by the researcher
+			\item $h(\theta) = \left(r_1 p(y|\theta) p(\theta) + r_2 \hat{m}(y) g(\theta)\right)^{-1}$
+			\item $\theta_g$ are parameter samples taken from $g$ (total of $N_2$ samples)
+			\item $\theta_y$ are parameter samples taken from the posterior distribution (total of $N_1$ samples)
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Numerical Issues With Bridge Sampling}
+$$\hat{m}(y) = \frac{\frac{1}{N_2}\sum_{s=1}^{N_2} p\left(y|\theta_{g}^{[s]}\right)p\left(\theta_{g}^{[s]}\right)h\left(\theta_{g}^{[s]}\right)}{\frac{1}{N_1}\sum_{s=1}^{N_1} h\left(\theta_{y}^{[s]}\right)g\left(\theta_{y}^{[s]}\right)}$$
+\begin{itemize}
+	\item For large numbers of parameters, $p(\theta)$ and $g(\theta)$ can be very small positive numbers
+	\item Thus, $h(\theta)$ can take on very large values
+	\item Terms in each sum can be very large or very small, are eventually truncated because of finite machine precision, making numerator and denominator inaccurate
+	\item Inaccuracies are magnified by division of numerator by denominator
+	\item Will show an example of biased marginal likelihood estimates that result
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+	\item 
+\end{itemize}
+\end{frame}
+
+\end{document}
