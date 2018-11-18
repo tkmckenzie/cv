@@ -1,5 +1,7 @@
 \documentclass{beamer}
 
+\usepackage{multirow}
+
 \newcommand{\ep}{\varepsilon}
 \newcommand{\img}[1]{\includegraphics[width=4in]{#1}}
 
@@ -183,6 +185,213 @@ $$\hat{m}(y) = \frac{\frac{1}{N_2}\sum_{s=1}^{N_2} p\left(y|\theta_{g}^{[s]}\rig
 	\item Terms in each sum can be very large or very small, are eventually truncated because of finite machine precision, making numerator and denominator inaccurate
 	\item Inaccuracies are magnified by division of numerator by denominator
 	\item Will show an example of biased marginal likelihood estimates that result
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Iterative Kernel Density Estimation}
+\begin{itemize}
+	\item The marginal likelihood of model $M_k$ can be written as $$m(y|M_k) = \frac{f(y|\theta, M_k)p(\theta|M_k)}{p(\theta|y, M_k)}$$
+		\begin{itemize}
+			\item $f(y|\theta, M_k)$ is the likelihood, defined by model
+			\item $p(\theta)$ is the prior density, defined by researcher
+			\item $p(\theta|y, M_k)$ is posterior density, must be estimated
+		\end{itemize}
+	\item As noted by Chib (1995), this relationship holds for all $\theta$, only need to estimate at one point $\theta^*$, such as the posterior mean
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Iterative Kernel Density Estimation}
+\begin{itemize}
+	\item Markov Chain Monte Carlo (MCMC) produces samples of $\theta|y, M_k$, could theoretically use these samples to estimate posterior density
+	\item Some problems:
+		\begin{itemize}
+			\item Traditional kernel density estimators produce biased density estimates
+				\begin{itemize}
+					\item Traditional estimators overestimate in low density regions and underestimate in high density regions
+					\item Adaptive kernel density estimation corrects for this issue (Portnoy and Koenker, 1989)
+				\end{itemize}
+			\item Kernel density estimation suffers from the curse of dimensionality
+				\begin{itemize}
+					\item Traditional estimators are largely infeasible for more than six dimensions
+					\item Adaptive kernel density estimation is unreliable for more than a few dimensions
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Iterative Kernel Density Estimation}
+\begin{itemize}
+	\item To address the curse of dimensionality, first denote the parameter vector as $\theta = (\theta_1, \theta_2, ..., \theta_P)'$
+	\item Posterior density can be written as
+\begin{align}
+p(\theta|y)
+&= p(\theta_1, ..., \theta_P|y) \\
+&= p(\theta_1|\theta_2, ..., \theta_P, y)\times p(\theta_2, ..., \theta_P|y) \\
+&= p(\theta_1|\theta_2, ..., \theta_P, y)\times p(\theta_2|\theta_3, ..., \theta_P, y) \\ &\qquad\times p(\theta_3, ..., \theta_P|y) \\
+&= ... \\
+&= p(\theta_1|\theta_2, ..., \theta_P, y)\times p(\theta_2|\theta_3, ..., \theta_P, y)\\ &\qquad\times ...\times p(\theta_P|y).
+\end{align}
+	\item The density of a $P$-dimensional vector is broken into $P$ one-dimensional densities
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Iterative Kernel Density Estimation}
+The iterative kernel density estimator has the following algorithm:
+\begin{enumerate}
+	\item Draw samples of $\theta|y$ using an MCMC algorithm.
+	\item Choose $\theta^*$ from a high-density region of $\theta|y$, such as the sample mean or maximum a posteriori.
+	\item Estimate the log-density of $\theta_P|y$ at $\theta_P^*$ using adaptive KDE, denoting that value $\ln \hat{p}(\theta_P^*|y)$.
+	\item For each $i$ from $P-1, ..., 1$:
+	\begin{enumerate}
+		\item Re-estimate the model, setting $(\theta_{i+1}, ..., \theta_P) = (\theta_{i+1}^*, ..., \theta_P^*)$, to obtain draws of $(\theta_1, ..., \theta_i)|(\theta_{i+1}^*, ..., \theta_P^*), y$.
+		\item Estimate the log-density of $\theta_i|\theta_{i+1}^*, ..., \theta_P^*, y$ at $\theta_i^*$ using adaptive KDE, denoting that value $\ln \hat{p}(\theta_i^*|\theta_{i+1}^*, ..., \theta_P^*, y)$.
+	\end{enumerate}
+	\item Find the sum of each of the estimated partial log-densities to arrive at an estimate for the overall log-posterior density, denoted $\ln \hat{p}(\theta^*|y)$.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{Simulations: Multivariate Normal Linear Model}
+\begin{subequations}
+	\begin{align}
+	y &= X\beta + \ep \\
+	\ep &\sim iid \mbox{ }N(0, \sigma^2). 
+	\beta &= (-2, 5, 3)'\\
+	\sigma &= 25
+	\end{align}
+\end{subequations}
+
+\begin{itemize}
+	\item Marginal likelihood is estimable via Gibbs sampling and with iterative kernel density estimation
+	\item Data were generated once
+	\item Marginal likelihood estimated using Gibbs sampling and iterative kernel density estimation 500 times each
+	\item A test of equality of mean estimates between Gibbs sampling and iterative kernel density estimation was performed
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Simulations: Multivariate Normal Linear Model}
+\begin{table}
+	\centering
+	\begin{tabular}{l|c|c|c|c}
+		&  &  &  & Mean Test \\ 
+		Model & \# Trials & Gibbs/Chib & Iterative KDE & $p$-value \\ 
+		\hline
+		\hline
+		\multirow{3}{*}{Multivariate Linear} & \multirow{3}{*}{500} & -481.353 & -481.348 & \multirow{3}{*}{0.493} \\ 
+		&  & (0.154) & (0.078) &  \\ 
+		&  & Iter = 5,000 & Iter = 5,000 &  \\ 
+		\hline
+	\end{tabular}
+	\caption{Comparison of Gibbs and Iterative KDE} 
+	\label{tab:MVN-Probit}
+\end{table}
+\end{frame}
+
+\begin{frame}{Simulations: Large Multivariate Normal Linear Model}
+\begin{subequations}
+	\begin{align}
+	y &= X\beta + \ep \\
+	\ep &\sim iid \mbox{ }N(0, \sigma^2)\\
+	\beta_i &\sim U(-10, 10); \mbox{\ \ \ \ } i = 1, ..., 50\\
+	\sigma &= 25
+	\end{align}
+\end{subequations}
+\begin{itemize}
+	\item Large model has potential to bias bridge sampling estimates
+	\item Marginal likelihood estimated with Gibbs sampling, iterative kernel density estimation, and bridge sampling 100 times each
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{table}
+	\centering
+	\begin{tabular}{c|c|c|c|c}
+		& Iterative &  & IKDE = Chib & Bridge = Chib \\ 
+		Chib & KDE & Bridge & $p$-value & $p$-value \\ 
+		\hline
+		\hline
+		-606.927 & -606.88 & -607.094 & \multirow{2}{*}{0.125} & \multirow{2}{*}{$1.777\times 10^{-13}$} \\ 
+		(0.195) & (0.24) & (0.014) &  &  \\ 
+		\hline
+	\end{tabular}
+	\caption{Comparison of Chib, Iterative KDE, and Bridge Sampling} 
+	\label{tab:bridge}
+\end{table}
+\begin{itemize}
+	\item Bias in bridge sampling estimates can result in up to ~5\% difference in model probabilities
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Other Simulation Results}
+\begin{itemize}
+	\item Simulations also performed for probit models, showing similar results
+	\item Like bridge sampling, Laplace's method, and similar estimators, iterative kernel density estimation is widely applicable
+		\begin{itemize}
+			\item Used to distinguish probit from logit models in simulations
+			\item Used to test different forms of the production function in stochastic frontier model (our motivating example)
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Production Function Selection}
+\begin{itemize}
+	\item Recall the stochastic frontier model:
+		\begin{itemize}
+			\item $y_i = \log Y_i$
+			\item $f(X_i) = \log F(X_i)$
+			\item $\delta_i = \log \Delta_i \leq 0$
+			\item $\ep_i = \log \tilde\ep_i$
+		\end{itemize}
+	\item Distributional assumptions:
+		\begin{itemize}
+			\item $\delta_i\sim N^-(0, \sigma_\delta)$
+			\item $\ep_i\sim N(0, \sigma_\ep)$
+		\end{itemize}
+	\item Functional forms for $f$:
+		\begin{itemize}
+			\item Log-linear
+			\item Translog
+			\item Non-parametric
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Production Function Selection: Data}
+\begin{itemize}
+	\item Sample dataset describing cereal production of 29 countries in 2012, from the World Bank
+	\item Output: Metric tons of cereal grains produced
+	\item Inputs: Area of land used for cereal production, fertilizer consumption, freshwater withdrawals, average rainfall, total number of people working in agriculture
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Production Function Selection}
+\begin{itemize}
+	\item Gibbs sampling can be used to estimate log-linear and translog forms
+	\item Non-parametric (Gaussian process) form must be estimated using another method
+	\item Non-parametric form has many parameters, data are relatively limited
+		\begin{itemize}
+			\item Iterative kernel density estimation is the only method appropriate for estimating marginal likelihood in this example
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Production Function Selection: Results}
+\begin{table}[!h]
+	\centering
+	\begin{tabular}{l|c|c|c|c|c}
+		&  & Log & Log & Log & Log Marginal \\ 
+		Model & \# Parameters & Likelihood & Prior & Posterior & Likelihood \\ 
+		\hline
+		\hline
+		Log-Linear & 8 & -3.734 & -10.225 & 15.249 & -29.208 \\ 
+		Translog & 23 & -0.699 & -23.666 & 44.62 & -68.984 \\ 
+		GP & 37 & 2.68 & -27.937 & 21.458 & -46.716 \\ 
+		\hline
+	\end{tabular}
+	\caption{Marginal Likelihood Estimates} 
+	\label{tab:GPSF-ML}
+\end{table}
+\begin{itemize}
+	\item 
 \end{itemize}
 \end{frame}
 
