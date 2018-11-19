@@ -254,7 +254,10 @@ The iterative kernel density estimator has the following algorithm:
 \begin{subequations}
 	\begin{align}
 	y &= X\beta + \ep \\
-	\ep &\sim iid \mbox{ }N(0, \sigma^2). 
+	\ep &\sim \mbox{ }N(0, \sigma^2 I_{100})\\
+	\mbox{\ } \\
+	X_1 &= \mathbf{1}_{100}\\
+	X_i &\sim U(-10, 10); \mbox{\ \ \ \ } i = 2, 3\\
 	\beta &= (-2, 5, 3)'\\
 	\sigma &= 25
 	\end{align}
@@ -262,14 +265,16 @@ The iterative kernel density estimator has the following algorithm:
 
 \begin{itemize}
 	\item Marginal likelihood is estimable via Gibbs sampling and with iterative kernel density estimation
-	\item Data were generated once
-	\item Marginal likelihood estimated using Gibbs sampling and iterative kernel density estimation 500 times each
-	\item A test of equality of mean estimates between Gibbs sampling and iterative kernel density estimation was performed
+		\begin{itemize}
+			\item Estimate marginal likelihood using Gibbs sampling and iterative kernel density estimation 500 times each
+			\item Test for equality of means
+		\end{itemize}
 \end{itemize}
 \end{frame}
 
 \begin{frame}{Simulations: Multivariate Normal Linear Model}
 \begin{table}
+	\footnotesize
 	\centering
 	\begin{tabular}{l|c|c|c|c}
 		&  &  &  & Mean Test \\ 
@@ -290,7 +295,10 @@ The iterative kernel density estimator has the following algorithm:
 \begin{subequations}
 	\begin{align}
 	y &= X\beta + \ep \\
-	\ep &\sim iid \mbox{ }N(0, \sigma^2)\\
+	\ep &\sim \mbox{ }N(0, \sigma^2 I_{100})\\
+	\mbox{\ } \\
+	X_1 &= \mathbf{1}_{100}\\
+	X_i &\sim U(-10, 10); \mbox{\ \ \ \ } i = 2, ..., 50\\
 	\beta_i &\sim U(-10, 10); \mbox{\ \ \ \ } i = 1, ..., 50\\
 	\sigma &= 25
 	\end{align}
@@ -376,6 +384,7 @@ The iterative kernel density estimator has the following algorithm:
 
 \begin{frame}{Production Function Selection: Results}
 \begin{table}[!h]
+	\footnotesize
 	\centering
 	\begin{tabular}{l|c|c|c|c|c}
 		&  & Log & Log & Log & Log Marginal \\ 
