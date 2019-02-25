@@ -1,0 +1,14 @@
+Hi Jennie,
+
+I'm sorry to get back to you so late, I've been making sure I have a good handle on what I can share and potentially present about the projects I've worked on. I've included short descriptions of a few of the cyber projects I've had the most involvement with at Sandia. Please let me know if I can expand on or clarify any of these.
+
+* Developed methodology to help the DHS Cybersecurity Advisor (CSA) group prioritize stakeholder engagements, taking into account their relatively limited resources. Prioritization focused on (1) likelihood of an engagement leading to a cyber assessment by CSA, which was quantitatively assessed using data from past engagements; and (2) risk posed by cyber threats to stakeholders, which was qualitatively assessed from literature reviews and communication with CSA that included having individual advisors score risk of hypothetical stakeholders.
+* Developed methodology and tool for translating low-level data from an enterprise network (e.g., latency of communication, status of hosts/routers/processes on the network) into measures of status of capabilities (e.g., ability to send emails or transfer files). The analysis included quantitive methods like time-series analyses to extract useful information from low-level data and qualitative methods derived from discussions with subject-matter experts familiar with the enterprise network to aggregate low-level measures to higher-level capabilities.
+* Involved in performing and documenting red team assessments, which aim to identify vulnerabilities in a system by taking an adversarial perspective while attempting to infiltrate the system. Sandia's primary red team uses an holistic approach that focuses on both cyber and physical vulnerabilities, identifying attack paths that are feasible and most efficient for a given adversarial model. (I wouldn't be able to talk about specific assessments, but I could talk generally about the red team process and how it fits into risk analysis)
+
+Thanks for reading these over, and I hope you're doing well!
+
+
+Thanks,
+
+Taylor
