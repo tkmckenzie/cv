@@ -2,31 +2,162 @@
 
 \usepackage{multirow}
 
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
 \newcommand{\ep}{\varepsilon}
-\newcommand{\img}[1]{\includegraphics[width=4in]{#1}}
+\newcommand{\img}[3]{\begin{figure}\centering\includegraphics[width=#3in]{figures/#1}\caption{#2}\end{figure}}
 
 \begin{document}
 	
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+text width=5em, text centered, rounded corners, minimum height=4em]
+\tikzstyle{line} = [draw, -latex']
+	
 %%%%% Background & Work at Sandia %%%%%
-\begin{frame}{Background}
+\begin{frame}{Motivating Example: Description}
 \begin{itemize}
-	\item Received Ph.D. in Economics from the University of Oregon in 2017
+	\item Let's begin with a simple example:
 		\begin{itemize}
-			\item Focused on industrial organization and econometrics
-			\item Efficiency analyses (technical and allocative)
-			\item Structural modeling of pricing and economies of scale
+			\item Construct a model of outputs $y$ based on inputs $X$
+			\item Interested in estimating/describing $y|X$ and quantifying uncertainty in that estimate
 		\end{itemize}
-	\item Experience interning at Pacific Northwest National Laboratory
+	\item These data are based on actual experiments performed on cyber system
 		\begin{itemize}
-			\vspace*{-3ex}
-			\item Disease modeling
-			\item Nuclear proliferation pathway analysis
-			\item Social media analytics
-			\item Social network analysis for cyber vulnerabilities
+			\item $X$: Bandwidth of servers on the network
+			\item $y$: Throughput of data across the network
 		\end{itemize}
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Motivating Example: Sample Data}
+	\img{lm-error-dist-standard-point.pdf}{Sample Data}{4}
+\end{frame}
 
+\begin{frame}{Motivating Example: Standard Approach}
+\begin{itemize}
+	\item Standard approach:
+		\begin{enumerate}
+			\item Relationship between $X$ and $y$ looks linear
+			\item Perform ordinary least squares (OLS) regression
+			\item (Possibly) Examine diagnostics to check validity of assumptions
+		\end{enumerate}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivating Example: Linear Regression}
+	\img{lm-error-dist-standard-fit.pdf}{Fitted Sample Data}{4}
+\end{frame}
+
+\begin{frame}{Motivating Example: Diagnostics}
+	\img{lm-error-dist-standard-fitted-values.pdf}{Residuals vs. Fitted Values}{4}
+\end{frame}
+
+\begin{frame}{Motivating Example: Diagnostics}
+	\img{lm-error-dist-standard-qq.pdf}{Normal Quantile Plot}{4}
+\end{frame}
+
+\begin{frame}{Motivating Example: Standard Practice}
+\begin{itemize}
+	\item Many practitioners may not have run diagnostics
+	\item If diagnostics were run, many practitioners will
+		\begin{itemize}
+			\item use residuals vs. fitted values as evidence that errors are uncorrelated and homoskedastic (constant variance).
+			\item use quantile plot as evidence that errors are approximately normal, with exception of one outlier.
+		\end{itemize}
+	\item An especially diligent practitioner may run test of normality of residuals
+		\begin{itemize}
+			\item Shapiro-Wilk test $p$-value: 0.03917
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Gauss-Markov Theorem}
+\begin{itemize}
+	\item However, most practitioners won't worry about normality
+	\item Gauss-Markov theorem states OLS estimate is best linear unbiased estimate as long as
+	\begin{itemize}
+		\item errors have mean zero
+		\item errors have constant finite variance
+		\item errors are uncorrelated
+	\end{itemize}
+	\item While normality is needed for inference (e.g., significance, confidence intervals), it is not needed to produce unbiased parameter estimates or predictions
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Finite Variance Assumption}
+\begin{itemize}
+	\item Gauss-Markov theorem requires that errors have constant \textbf{finite} variance
+	\item Errors in the sample data are Cauchy distributed
+		\begin{itemize}
+			\item Cauchy and normal distributions look \textit{similar}
+			\item Cauchy distribution has fat tails, to the point where the mean and variance do not exist
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Normal and Cauchy Distributions}
+	\img{normal-cauchy.pdf}{Normal and Cauchy Distributions}{4}
+\end{frame}
+
+\begin{frame}{Infinite Variance Consequences}
+\begin{itemize}
+	\item When errors are Cauchy distributed
+		\begin{itemize}
+			\item $E[y|X]$ does not exist, so cannot be estimated
+			\item Weak law of large numbers does not hold, so OLS parameter estimates do not converge to true values (or any other value) as sample size increases
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modeling Process}
+\resizebox{\columnwidth}{!}{
+\begin{tikzpicture}[node distance = 3cm, auto]
+	% Nodes
+	\node [block] (question) {Question};
+	\node [block, right of=question] (hypothesis) {Hypothesis};
+	\node [block, right of=hypothesis] (theory) {Theoretical Model};
+	\node [block, right of=theory] (empirics) {Empirical Model};
+	\node [block, above of=empirics] (data) {Data};
+	\node [block, right of=empirics] (evaluation) {Evaluation/\\diagnostics};
+	\node [block, right of=evaluation] (results) {Results};
+	% Edges
+	\path [line] (question) -- (hypothesis);
+	\path [line] (hypothesis) -- (theory);
+	\path [line] (theory) -- (empirics);
+	\path [line] (data) -- (empirics);
+	\path [line] (empirics) -- (evaluation);
+	\path [line] (evaluation.south) |- ++(0,-5mm) -| (empirics.south);
+	\path [line] (evaluation.south) |- ++(0,-5mm) -| (theory.south);
+	\path [line] (evaluation) -- (results);
+\end{tikzpicture}
+}
+\end{frame}
+
+\begin{frame}{Replication Crisis}
+\begin{itemize}
+	\item In academic publishing, studies are reviewed for logical consistency and to ensure best practices are followed
+	\item Peer review should enhance reproducibility of studies
+	\item However, many published findings have proven difficult to replicate
+		\begin{itemize}
+			\item Reviewers don't have time/resources to verify all details in theory/empirics
+			\item Often completely impossible to verify assumptions of empirical model (access to data/code, infeasible to re-run analysis)
+			\item Reviewers rarely see iterations on theory/empirics
+		\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Review of OUO/Classified Studies}
+\begin{itemize}
+	\item OUO and classified studies are rarely undergo any in-depth review
+	\item When reviews are conducted, it can be especially difficult to obtain data and code used for analysis
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\begin{itemize}
+	\item 
+\end{itemize}
+\end{frame}
 
 \end{document}
