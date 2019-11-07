@@ -118,20 +118,32 @@ text width=5em, text centered, rounded corners, minimum height=4em]
 	\node [block, right of=question] (hypothesis) {Hypothesis};
 	\node [block, right of=hypothesis] (theory) {Theoretical Model};
 	\node [block, right of=theory] (empirics) {Empirical Model};
-	\node [block, above of=empirics] (data) {Data};
-	\node [block, right of=empirics] (evaluation) {Evaluation/\\diagnostics};
+	\node [block, above of=theory] (data) {Data};
+	\node [block, right of=empirics] (evaluation) {Evaluation/\\Diagnostics};
+	\node [block, above of=evaluation] (empirical-assumptions) {Empirical Assumptions};
 	\node [block, right of=evaluation] (results) {Results};
 	% Edges
 	\path [line] (question) -- (hypothesis);
 	\path [line] (hypothesis) -- (theory);
 	\path [line] (theory) -- (empirics);
-	\path [line] (data) -- (empirics);
+	\path [line] (empirical-assumptions) -| (empirics);
+	\path [line] (data) -| (empirics);
 	\path [line] (empirics) -- (evaluation);
-	\path [line] (evaluation.south) |- ++(0,-5mm) -| (empirics.south);
-	\path [line] (evaluation.south) |- ++(0,-5mm) -| (theory.south);
+	\path [line] (evaluation) -- (empirical-assumptions);
+	\path [line] (evaluation.south) |- ++(0,-5mm) -| (hypothesis.south);
 	\path [line] (evaluation) -- (results);
 \end{tikzpicture}
 }
+\end{frame}
+
+\begin{frame}{Review Process}
+\begin{enumerate}
+	\item Are assumptions approximately justified?
+	\item Does theoretical model logically follow from assumptions?
+	\item Are empirical assumptions approximately justified?
+	\item Does empirical model logically follow from theoretical model and empirical assumptions?
+	\item Do diagnostics validate assumptions?
+\end{enumerate}
 \end{frame}
 
 \begin{frame}{Replication Crisis}
@@ -151,6 +163,13 @@ text width=5em, text centered, rounded corners, minimum height=4em]
 \begin{itemize}
 	\item OUO and classified studies are rarely undergo any in-depth review
 	\item When reviews are conducted, it can be especially difficult to obtain data and code used for analysis
+	\item Lack of quality review process potentially puts OUO/classified studies at higher risk of reproducibility crisis
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Anecdotal Evidence}
+\begin{itemize}
+	\item 
 \end{itemize}
 \end{frame}
 
