@@ -1,0 +1,224 @@
+\documentclass[11pt]{article}
+%\usepackage{fullpage}
+%\usepackage{amsmath}
+%\usepackage{amssymb}
+%\usepackage[usenames]{color}
+%\usepackage{multicol}
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-1in
+\textheight=10in
+\footskip=-10pt
+
+\raggedright
+\thispagestyle{empty}
+
+\pagenumbering{gobble}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\scshape{#1}\\
+	\vspace*{-5pt}
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\contact}[4]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\begin{center}
+			{\Large \scshape {#1}}\\ \smallskip
+			{#2}\\ \smallskip 
+			{#3}\\ \smallskip
+			{#4}\smallskip
+		\end{center}
+	\end{changemargin}
+}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.25in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+\newcommand{\school}[4]{
+	\textbf{#1} \hfill \emph{#2\\}
+	#3\\ 
+	#4\\
+}
+
+\newenvironment{blockquote}{%
+	\par%
+	\medskip
+	\leftskip=1em\rightskip=1em%
+	\noindent\ignorespaces}{%
+	\par\medskip}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+
+
+
+\contact{\vspace*{-5ex}Taylor K McKenzie}{U.S. Citizen, DOE Q Clearance\\ \textbf{Address:} 404 Solano Dr SE, Albuquerque, NM 87108}{\vspace*{-0.75ex}\textbf{E-mail:} tkmckenzie@gmail.com / \textbf{Cell Phone:} +1 (509) 430-0031}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\vspace{-12pt}
+\header{Education}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Ph.D. Economics}{} \hfill \emph{June 2017}{} \\
+	\emph{University of Oregon}, Eugene, OR{}\\
+	\emph{Dissertation: Railroads, Their Regulation, and Its Effect on Efficiency and Competition}\\
+	\emph{Committee: Dr. Wesley W. Wilson, Dr. Van Kolpin, Dr. Jeremy Piger,}\\
+	\ \ \ \ \emph{Dr. Diane Del Guercio, Dr. Keaton Miller}\\
+	\vspace*{0pt}
+  \medskip
+	\textbf{M.S. Economics}{} \hfill \emph{December 2013}{} \\
+	\emph{University of Oregon}, Eugene, OR{}\\
+	\emph{Advisor: Dr. Wesley W. Wilson} \\
+	\vspace*{0pt}
+  \medskip
+  	\textbf{B.A. Mathematics and Economics}{} \hfill \emph{May 2012}{} \\
+	\emph{Willamette University}, Salem, OR{}\hfill \emph{Summa Cum Laude}{}\\
+	\emph{Advisors: Dr. Raechelle Mascarenhas and Dr. Peter Otto} {} \hfill\\
+\end{body}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+% Experience
+\header{Relevant Work Experience}
+
+\begin{body}
+	\vspace{14pt}
+	
+	\textbf{Sandia National Laboratories} \hfill \emph{March 2020 - Present}\\
+	\emph{Senior Systems Analyst, Strategic Futures and Policy Analysis Group}
+	\vspace*{-4pt}
+	\begin{itemize}
+		\item Designed and performed statistical analyses to assess and inform laboratory policy. Examined both short-term mission-enabling policies as well as long-term strategic policies.
+		\item Contributed to Global Futures studies on Space, Collective Security, and Economic Value. Findings for these studies informed strategic and funding policy at the laboratory.
+	\end{itemize}	
+	
+	\textbf{Sandia National Laboratories} \hfill \emph{August 2017 - March 2020}\\
+	\emph{Senior Cybersecurity Researcher, Cyber Resilience Group}
+	\vspace*{-4pt}
+	\begin{itemize}
+		\item Experience structuring and performing quantitative statistical analyses for a variety of applications using classical statistics, Bayesian statistics, and uncertainty quantification methods. Emphasized reproducible analyses, accounting for frequently atypical statistical properties of data.
+		\item Involved with projects across a variety of disciplines and centers at Sandia. Regularly worked with multidisciplinary teams and frequently synthesized results and expertise from the team to build simulations and predictive models.
+	\end{itemize}	
+	
+%	\vspace{14pt}
+	
+	\textbf{University of Oregon} \hfill \emph{Fall-Spring 2012-2017}\\
+	\emph{Graduate Teaching Fellow}\\
+	\emph{Department of Economics}
+	\vspace*{-4pt}
+	\begin{itemize}
+		\item Developed curriculum and acted as independent instructor of five courses covering intermediate microeconomic theory, industrial organization, and development economics. Served as a teaching assistant and provided additional instruction to undergraduate and graduate students.
+		\item Conducted research in industrial organization, authoring the dissertation ``Railroads, Their Regulation, and Its Effect on Efficiency and Competition.''
+	\end{itemize}
+
+	\textbf{Pacific Northwest National Laboratory}  \hfill \emph{Summers of 2010-2012, 2014}\\
+	\emph{National Security Intern}\\ 
+	\emph{Knowledge Discovery and Informatics Group}\\
+	\emph{Mentors: Dr. Courtney Corley and Dr. Satish Chikkagoudar}
+	\vspace*{-4pt}
+	\begin{itemize}	
+		\item Conducted research into biosurveillance, disease propagation, social media phenomenology, and cybersecurity. Developed systems models to describe spread of disease, predictive statistical models to describe social media trends and topics, and game-theoretic statistical models used to recreate inter-organizational email traffic for use in cyber simulations.
+	\end{itemize}
+				
+\end{body}
+
+\pagebreak
+
+\smallskip
+\header{Relevant Skills}
+\begin{body}
+	\vspace{14pt}
+	\begin{itemize}
+		\item Extensive experience using R, Python, Matlab, and Stata to perform simulations and implement statistical methods.
+		\item Experience working with diverse teams and developing models that synthesize theories and results from a multitude of disciplines.
+		\item Familiarity with Sandia-developed software performing uncertainty quantification, simulation, and resilience quantification, including Dakota and the Microgrid Design Toolkit.
+		\item Formal training and practical experience in cybersecurity, ranging from studies of mission and capability resilience of cyber-dependent systems to investigating impacts of specific cyber vulnerabilities.
+	\end{itemize}
+\end{body}
+
+\smallskip
+\header{Notable Results and Accomplishments}
+\begin{body}
+	\vspace{14pt}
+	\begin{itemize}
+		\item Sandia Employee Recognition Award for contributions to COVID-19 Pandemic Modeling Effort. Personal contributions: Performed analysis of economic impacts under various projected pandemic and return-to-workplace scenarios. This work also earned personal recognition from J. Stephen Binkley, Acting Director of DOE Office of Science on February 3, 2021.
+		\item Sandia Employee Recognition Award for contributions to Disablement Laser project. Personal contributions: Performed statistical analysis of kill times under various scenarios and configurations, informing expectations real-world outcomes.
+		\item Performed review of statistical methodology in risk assessment of Mars 2020 rover launch. Developed alternative methodology that more accurately described physical phenomenology of crash events. Worked closely with Air Force/NASA and risk assessment team to demonstrate improvements provided by alternative methodology, eventually leading to that methodology being adopted for current and future missions.
+		\item Involved with developing theory of uncertainty quantification for experiments that quantify risk posed to and resilience of cyber systems. Developing framework to address often unusual statistical properties of outcomes from cyber experiments and applying those methods to existing simulations to inform customer decisions.
+		\item Development and maintenance of R package \texttt{snfa} (Smooth Non-Parametric Frontier Analysis), available on the Comprehensive R Archive Network (CRAN). Applications to projects analyzing technology transfer efficiency at national laboratories are being explored.
+		\item Best dissertation award from the American Economic Association's Transportation and Public Utilities Group and Ph.D. Research Paper Award from the University of Oregon for paper titled ``Markups and Scale Elasticities for Differentiated Railroad Networks.''
+	\end{itemize}
+\end{body}
+
+\smallskip
+\vspace*{-5pt}
+\header{Publications and Reports}
+\begin{body}
+\vspace{14pt}
+\begin{itemize}
+	\item Aamir, Munaf, Taylor McKenzie, Walter Beyeler, Ryan Kennedy, Raymond Reilly III (2022). Global Futures Series: The Future of Economic Value and National Security. SAND2022-8480PE (UUR).
+	\item Hayden, Nancy, Marie Arrieta, Mary Ann Cordova, Taylor McKenzie, and Michael Vannoni (2020). Telecommuting Best Practices. SAND2020-5530R (UUR).
+	\item Keller, Elizabeth Kistin, Ryan Kennedy, Nancy Hayden, Catherine Branda, Julia Fruetel, Kelsey Abel, Mikaela Armenta, Ashley Maes, Taylor McKenzie, Emily O'Bryan, Danielle Rodriguez, Bryn Stuart, and Nerayo Teclemariam (2020). Sandia Covid-19 Scenarios Initiative: Anticipating and Shaping Mission Futures. SAND2020-7168R (OUO Ex. 5).
+	\item Hayden, Nancy, Munaf Aamir, John Foley, Patricia Hernandez, Elizabeth Keller, Caroline Maloney, Taylor McKenzie, Carrie McNeil, Thomas Nelson, Emily O'Bryan, Elizabeth Roll, Matthew Sumner, and David White. SLT COVID-19 Scenario Exercise. SAND2020-12622R (OUO Ex. 5).
+	\item McKenzie, Taylor, Thomas D. Tarman, Christopher Lamb (2020). Uncertainty Quantification for Cyber-Physical PWR Experiments. Proceedings of the 28th Annual International Conference on Nuclear Engineering. SAND2020-1357C (UUR).
+	\item Keller, Elizabeth Kistin, Ryan Kennedy, Taylor McKenzie, Emily O'Bryan, Bryn Stuart, and Nerayo Teclemariam (2020). Sandia Covid-19 Scenarios Initiative: FY21 Budget Fluctuations and Adaptations. SAND2020-7166R (OUO Ex. 5).
+	\item Galiardi, Meghan, Nicholas Jacobs, Christine Lai, Taylor McKenzie, Trisha Miller, Christopher Perr, Zachary Thomas, Eric Vugrin, and Lynn Yang (2019). Metric Development for the NETCOM System Impact and Resilience (SIR) Project. SAND2019-0875R (OUO Ex. 7).
+	\item Yang, Lynn Rossitza Homan, Sean DeRosa, Ann Hammer, Dennis Raymond Imbro, Taylor McKenzie, Trisha Hoette Miller, Daniel J. Pless, Mark D. Tucker, and Gregory D. Wyss (2018). CSA Engagement Prioritization Methodology (EPM) Overview and Process. SAND-2018-11322 (OUO Ex. 7).
+	\item F\"{a}re, Rolf, Taylor McKenzie, Wesley Wilson, and Wenfeng Yang (2017). Mergers, efficiency, and productivity in the railroad industry: An attribute-incorporated data envelopment analysis approach. Transportation Policy and Economic Regulation: Essays in Honor of Theodore Keeler.
+	\item Corley, C.D., C. Dowling, S.J. Rose, and Taylor McKenzie (2013). SociAL Sensor Analytics: Measuring Phenomenology at Scale. \textit{2013 IEEE International Conference on Intelligence and Security Informatics}, 61-66.
+	\item Corley, C.D., et al, including Taylor McKenzie (2012). Assessing the Continuum of Event-Based Biosurveillance Through an Operational Lens. \textit{Biosecurity and Bioterrorism 10(1)}, 131-41.
+\end{itemize}
+\end{body}
+
+\smallskip
+\header{Working Papers}
+
+\begin{body}
+\vspace{14pt}
+\begin{itemize}
+	\item McKenzie, Taylor. Markups and Scale Elasticities for Differentiated Railroad Networks (with Wesley W. Wilson).
+	\item McKenzie, Taylor. Decomposing Changes in Productivity Using Bayesian Methods.
+	\item McKenzie, Taylor. General Bayesian Marginal Likelihood Estimation Using Iterative Density Estimation.
+\end{itemize}
+\end{body}
+
+
+\end{document}
