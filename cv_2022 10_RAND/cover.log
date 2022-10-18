@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.30)  17 OCT 2022 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.2)  17 OCT 2022 19:33
 entering extended mode
 **./cover.tex
 (cover.tex
@@ -21,7 +21,7 @@ File: size11.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\preprint\fullpage.sty"
+(C:\Users\tkmckenzie\AppData\Roaming\MiKTeX\2.9\tex\latex\preprint\fullpage.sty
 Package: fullpage 1999/02/23 1.1 (PWD)
 \FP@margin=\skip43
 ) (cover.aux)
@@ -46,19 +46,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
 [1
 
-{C:/Users/tmcken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/tkmckenzie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 (cover.aux) ) 
 Here is how much of TeX's memory you used:
  225 strings out of 493305
- 2648 string characters out of 3138871
- 55825 words of memory out of 3000000
+ 2719 string characters out of 3138860
+ 57825 words of memory out of 3000000
  3857 multiletter control sequences out of 15000+200000
  3940 words of font info for 15 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  21i,4n,19p,855b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.
 pfb>
-Output written on cover.pdf (1 page, 24173 bytes).
+Output written on cover.pdf (1 page, 25744 bytes).
 PDF statistics:
  10 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
