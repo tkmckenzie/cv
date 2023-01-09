@@ -223,7 +223,7 @@ ggplot(line.df, aes(X, y)) +
   geom_point(data = point.df) +
   theme_bw() +
   theme(legend.position = "top")
-ggsave("images/gp_withnoise.png", width = width, height = height, scale = scale)
+ggsave("images/gp_withnoise.png", width = width * 1.25, height = height * 0.8, scale = scale)
 
 # Ridgeline plot
 N.x = 25
