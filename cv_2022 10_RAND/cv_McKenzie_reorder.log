@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.30)  25 OCT 2022 15:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.2)  25 OCT 2022 19:35
 entering extended mode
 **./cv_McKenzie_reorder.tex
 (cv_McKenzie_reorder.tex
@@ -45,11 +45,11 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 123.
  [1
 
-{C:/Users/tmcken/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/tkmckenzie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 [2] [3] (cv_McKenzie_reorder.aux) ) 
 Here is how much of TeX's memory you used:
  245 strings out of 493305
- 2975 string characters out of 3138871
+ 2991 string characters out of 3138860
  61825 words of memory out of 3000000
  3874 multiletter control sequences out of 15000+200000
  5919 words of font info for 22 fonts, out of 3000000 for 9000
@@ -61,7 +61,7 @@ onts/cm/cmcsc10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/P
 rogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on cv_McKenzie_reorder.pdf (3 pages, 105283 bytes).
+Output written on cv_McKenzie_reorder.pdf (3 pages, 105279 bytes).
 PDF statistics:
  36 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
