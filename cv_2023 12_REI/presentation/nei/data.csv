@@ -1,0 +1,95 @@
+﻿Name,State,Reactor.Type,Capacity.Factor.2021,Capacity.Factor.2019.2021,Summer.Capacity.2021,Generation.2021
+Arkansas Nuclear One 1,Arkansas,PWR,90.00,93.30,833.00,6570588.00
+Arkansas Nuclear One 2,Arkansas,PWR,81.00,83.90,985.00,6985096.00
+Beaver Valley 1,Pennsylvania,PWR,92.60,95.70,907.00,7356891.00
+Beaver Valley 2,Pennsylvania,PWR,89.00,94.60,901.00,7024505.00
+Braidwood 1,Illinois,PWR,95.40,97.90,1183.00,9887584.00
+Braidwood 2,Illinois,PWR,94.80,97.60,1154.00,9586763.00
+Browns Ferry 1,Alabama,BWR,98.90,93.30,1256.00,10881278.00
+Browns Ferry 2,Alabama,BWR,83.50,83.80,1259.00,9210093.00
+Browns Ferry 3,Alabama,BWR,99.30,92.90,1260.00,10962181.00
+Brunswick 1,North Carolina,BWR,97.40,91.90,938.00,8006921.00
+Brunswick 2,North Carolina,BWR,91.40,91.90,932.00,7461939.00
+Byron 1,Illinois,PWR,95.90,98.30,1164.00,9776596.00
+Byron 2,Illinois,PWR,102.40,98.80,1136.00,10193056.00
+Callaway,Missouri,PWR,39.30,67.20,1247.00,4292433.00
+Calvert Cliffs 1,Maryland,PWR,103.40,101.30,872.00,7895813.00
+Calvert Cliffs 2,Maryland,PWR,94.90,98.00,854.00,7097820.00
+Catawba 1,South Carolina,PWR,94.20,95.20,1160.00,9571297.00
+Catawba 2,South Carolina,PWR,89.50,94.10,1150.00,9014422.00
+Clinton,Illinois,BWR,89.50,93.40,1065.00,8348706.00
+Columbia Generating Station 2,Washington,BWR,84.40,87.90,1151.00,8511288.00
+Comanche Peak 1,Texas,PWR,99.70,93.90,1205.00,10528185.00
+Comanche Peak 2,Texas,PWR,84.30,90.30,1195.00,8828068.00
+Cooper,Nebraska,BWR,102.00,98.90,770.00,6880622.00
+Davis-Besse,Ohio,PWR,99.30,97.20,894.00,7779141.00
+Diablo Canyon 1,California,PWR,100.30,93.50,1122.00,9854372.00
+Diablo Canyon 2,California,PWR,67.60,72.40,1118.00,6622994.00
+Donald C. Cook 1,Michigan,PWR,103.10,93.30,1009.00,9110067.00
+Donald C. Cook 2,Michigan,PWR,86.40,89.90,1168.00,8843917.00
+Dresden 2,Illinois,BWR,93.90,94.90,902.00,7422615.00
+Dresden 3,Illinois,BWR,96.10,97.70,895.00,7534065.00
+Edwin I. Hatch 1,Georgia,BWR,93.90,91.90,876.00,7202991.00
+Edwin I. Hatch 2,Georgia,BWR,90.00,89.90,883.00,6962077.00
+Fermi 2,Michigan,BWR,93.70,84.40,1141.00,9369536.00
+Ginna,New York,PWR,92.80,92.00,582.00,4727764.00
+Grand Gulf 1,Mississippi,BWR,95.90,79.50,1401.00,11772058.00
+H.B. Robinson 2,South Carolina,PWR,96.70,95.60,759.00,6426473.00
+Hope Creek 1,New Jersey,BWR,88.40,92.10,1172.00,9080057.00
+Indian Point 31,New York,PWR,95.00,95.60,1039.00,2821401.00
+James A. Fitzpatrick,New York,BWR,99.60,95.80,848.00,7397717.00
+Joseph M. Farley 1,Alabama,PWR,92.90,95.30,874.00,7114415.00
+Joseph M. Farley 2,Alabama,PWR,100.20,94.50,896.00,7868522.00
+LaSalle 1,Illinois,BWR,101.90,99.70,1131.00,10092537.00
+LaSalle 2,Illinois,BWR,84.70,93.80,1134.00,8412208.00
+Limerick 1,Pennsylvania,BWR,102.50,99.40,1120.00,10050781.00
+Limerick 2,Pennsylvania,BWR,94.20,97.30,1122.00,9258265.00
+McGuire 1,North Carolina,PWR,102.10,95.40,1158.00,10361236.00
+McGuire 2,North Carolina,PWR,91.70,96.00,1158.00,9300878.00
+Millstone 2,Connecticut,PWR,92.60,92.90,853.00,6919561.00
+Millstone 3,Connecticut,PWR,96.30,89.80,1220.00,10296948.00
+Monticello,Minnesota,BWR,92.90,96.00,617.00,5022858.00
+Nine Mile Point 1,New York,BWR,91.30,91.90,630.00,5037579.00
+Nine Mile Point 2,New York,BWR,111.40,100.00,1144.00,11155916.00
+North Anna 1,Virginia,PWR,83.30,93.20,948.00,6919326.00
+North Anna 2,Virginia,PWR,102.20,93.70,944.00,8452320.00
+Oconee 1,South Carolina,PWR,102.20,98.50,847.00,7579868.00
+Oconee 2,South Carolina,PWR,94.00,96.20,848.00,6981796.00
+Oconee 3,South Carolina,PWR,101.60,98.50,859.00,7644799.00
+Palisades2,Michigan,PWR,100.60,97.00,796.00,7014799.00
+Palo Verde 1,Arizona,PWR,100.30,92.40,1311.00,11515959.00
+Palo Verde 2,Arizona,PWR,88.00,92.70,1314.00,10123959.00
+Palo Verde 3,Arizona,PWR,86.90,90.50,1312.00,9989944.00
+Peach Bottom 2,Pennsylvania,BWR,103.30,100.90,1265.00,11439087.00
+Peach Bottom 3,Pennsylvania,BWR,96.20,99.60,1285.00,10829157.00
+Perry 1,Ohio,BWR,89.30,91.60,1240.00,9703868.00
+Point Beach 1,Wisconsin,PWR,98.40,94.00,596.00,5137279.00
+Point Beach 2,Wisconsin,PWR,91.80,94.90,601.00,4832911.00
+Prairie Island 1,Minnesota,PWR,104.90,101.40,521.00,4785979.00
+Prairie Island 2,Minnesota,PWR,94.90,98.40,519.00,4313934.00
+Quad Cities 1,Illinois,BWR,96.00,96.80,908.00,7635531.00
+Quad Cities 2,Illinois,BWR,101.60,99.30,911.00,8104797.00
+River Bend 1,Louisiana,BWR,87.80,85.80,968.00,7441875.00
+Salem 1,New Jersey,PWR,101.70,83.20,1146.00,10205299.00
+Salem 2,New Jersey,PWR,88.80,92.30,1139.00,8856743.00
+Seabrook 1,New Hampshire,PWR,90.20,93.20,1248.00,9856117.00
+Sequoyah 1,Tennessee,PWR,87.80,88.80,1152.00,8865277.00
+Sequoyah 2,Tennessee,PWR,89.10,94.30,1126.00,8789535.00
+Shearon Harris 1,North Carolina,PWR,94.60,94.10,964.00,7986733.00
+South Texas Project 1,Texas,PWR,91.00,95.40,1300.00,10363168.00
+South Texas Project 2,Texas,PWR,93.60,96.70,1280.00,10491836.00
+St. Lucie 1,Florida,PWR,81.20,84.40,981.00,6978217.00
+St. Lucie 2,Florida,PWR,83.00,92.90,987.00,7175466.00
+Surry 1,Virginia,PWR,90.50,94.50,838.00,6640059.00
+Surry 2,Virginia,PWR,89.40,94.70,838.00,6559811.00
+Susquehanna 1,Pennsylvania,BWR,97.60,94.70,1247.00,10664952.00
+Susquehanna 2,Pennsylvania,BWR,84.90,90.80,1247.00,9278594.00
+Turkey Point 3,Florida,PWR,86.10,92.70,837.00,6314980.00
+Turkey Point 4,Florida,PWR,100.60,90.90,861.00,7589624.00
+V.C. Summer,South Carolina,PWR,77.00,88.20,971.00,6552773.00
+Vogtle 1,Georgia,PWR,93.70,96.70,1150.00,9443128.00
+Vogtle 2,Georgia,PWR,102.50,95.90,1152.00,10343780.00
+Waterford 3,Louisiana,PWR,96.10,85.90,1165.00,9806799.00
+Watts Bar 1,Tennessee,PWR,91.20,90.60,1123.00,8974715.00
+Watts Bar 2,Tennessee,PWR,88.50,88.60,1122.00,8700880.00
+Wolf Creek 1,Kansas,PWR,79.90,88.10,1225.00,8574732.00
