@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.2)  20 FEB 2024 16:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.6.2)  21 FEB 2024 17:43
 entering extended mode
-**./cover_Entefy.tex
-(cover_Entefy.tex
+**./cover_Microsoft.tex
+(cover_Microsoft.tex
 LaTeX2e <2017-04-15>
 Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -55,8 +55,8 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks15
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
-(cover_Entefy.aux)
-\openout1 = `cover_Entefy.aux'.
+(cover_Microsoft.aux)
+\openout1 = `cover_Microsoft.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
@@ -106,30 +106,35 @@ LaTeX Font Info:    ... okay on input line 10.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--26
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
 
  []
 
 [1
 
 {C:/Users/tkmckenzie/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(cover_Entefy.aux) ) 
+(cover_Microsoft.aux) ) 
 Here is how much of TeX's memory you used:
  743 strings out of 493305
- 10545 string characters out of 3138860
+ 10587 string characters out of 3138860
  74067 words of memory out of 3000000
  4354 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,4n,19p,2038b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr10.pfb>
-Output written on cover_Entefy.pdf (1 page, 27809 bytes).
+ 23i,4n,19p,2093b,107s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmr10.pfb>
+Output written on cover_Microsoft.pdf (1 page, 27777 bytes).
 PDF statistics:
  10 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
